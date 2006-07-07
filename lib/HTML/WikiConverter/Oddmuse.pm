@@ -5,7 +5,7 @@ use strict;
 
 use base 'HTML::WikiConverter';
 
-our $VERSION = '0.50';
+our $VERSION = '0.51';
 
 =head1 NAME
 
@@ -60,10 +60,9 @@ Disabling CamelCase links (the default) would convert that HTML into
 
 =cut
 
-sub attributes { (
-  shift->SUPER::attributes,
-  camel_case => 0
-) }
+sub attributes { {
+  camel_case => { default => 0 }
+} }
 
 sub rules {
   my %rules = (
@@ -86,6 +85,13 @@ sub rules {
     tr => { line_format => 'single', end => "||\n" },
     td => { start => \&_td_start, end => \&_td_end, trim => 'both' },
     th => { alias => 'td' },
+
+    h1 => { start => '=', end => '=', block => 1, line_format => 'single' },
+    h2 => { start => '==', end => '==', block => 1, line_format => 'single' },
+    h3 => { start => '===', end => '===', block => 1, line_format => 'single' },
+    h4 => { start => '====', end => '====', block => 1, line_format => 'single' },
+    h5 => { start => '=====', end => '=====', block => 1, line_format => 'single' },
+    h6 => { start => '======', end => '======', block => 1, line_format => 'single' },
   );
 
   return \%rules;

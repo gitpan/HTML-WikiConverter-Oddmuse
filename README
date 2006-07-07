@@ -1,4 +1,4 @@
-HTML::WikiConverter::Oddmuse version 0.50
+HTML::WikiConverter::Oddmuse version 0.51
 =========================================
 
 HTML::WikiConverter::Oddmuse adds the Oddmuse dialect to
@@ -18,19 +18,11 @@ Or from the command line:
 
 There's also a web interface if you're so inclined:
 
-  http://diberri.dyndns.org/html2wiki.html
+  http://diberri.dyndns.org/wikipedia/html2wiki/
 
-VERSION
+CHANGES IN 0.51
 
-This is HTML::WikiConverter::Oddmuse 0.50.
-
-Prior versions of HTML::WikiConverter supported the Oddmuse dialect
-out of the box. As of 0.50, each dialect was branched off into a
-separate CPAN package.
-
-CHANGES IN 0.50
-
-  * Oddmuse dialect now has its own CPAN package
+  * Add support for <h1> through <h6>
 
 DEPENDENCIES
 

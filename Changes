@@ -1,5 +1,10 @@
 # Change log for HTML::WikiConverter::Oddmuse
 
+version: 0.51
+date:    Fri Jul 7 2006
+changes:
+  - Add support for <h1> through <h6>
+
 version: 0.50
 date:    Tue Jan 10 2006
 changes:
