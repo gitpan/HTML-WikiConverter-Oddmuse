@@ -1,5 +1,5 @@
-HTML::WikiConverter::Oddmuse version 0.51
-=========================================
+HTML::WikiConverter::Oddmuse
+============================
 
 HTML::WikiConverter::Oddmuse adds the Oddmuse dialect to
 HTML::WikiConverter allowing the conversion of HTML to Oddmuse markup.
@@ -20,13 +20,10 @@ There's also a web interface if you're so inclined:
 
   http://diberri.dyndns.org/wikipedia/html2wiki/
 
-CHANGES IN 0.51
+CHANGES IN 0.52
 
-  * Add support for <h1> through <h6>
-
-DEPENDENCIES
-
-  * HTML::WikiConverter version 0.50
+  * Require HTML::WikiConverter 0.60
+  * Require Params::Validate
 
 INSTALLATION
 

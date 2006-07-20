@@ -5,7 +5,9 @@ use strict;
 
 use base 'HTML::WikiConverter';
 
-our $VERSION = '0.51';
+our $VERSION = '0.52';
+
+use Params::Validate ':types';
 
 =head1 NAME
 
@@ -61,7 +63,7 @@ Disabling CamelCase links (the default) would convert that HTML into
 =cut
 
 sub attributes { {
-  camel_case => { default => 0 }
+  camel_case => { default => 0, type => BOOLEAN }
 } }
 
 sub rules {
